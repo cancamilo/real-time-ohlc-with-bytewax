@@ -136,10 +136,10 @@ def get_dataflow(
                 - close
                 - volume
         """
-        ticker, window = ticker_data
+        ticker, window_tuple = ticker_data
         print("ticker", ticker)
-        print("ticker tuple", window)
-        _, data = window
+        window, data = window_tuple
+        print("ticker window", window)
         print("ticker data", data)
 
         ohlc = {
